@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/sugakefe/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<head>
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+  <div></div>   
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+var people = [{name:"song", age:25},
+              {name:"Eva", age:90},
+              {name:"billa", age: 2}];
+
+$(document).ready(function(){
+  for (var i =0; i < people.length; i++) {
+    (function(age){
+      var h1 = $("<h1>", {text: people[i].name});
+      h1.click(function(){
+        alert(age);
+      })
+      $('div').append(h1);    
+    })(people[i].age)
+  };
+});
+</script>
+</body>
+</html>
+  
